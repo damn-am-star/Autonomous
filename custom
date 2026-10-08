@@ -1,0 +1,11 @@
+# Clone the mirror
+git clone --bare https://github.com/your-username/chromium-mirror.git chromium-src.git
+cd chromium-src.git
+
+# Fetch updates from original
+git fetch --all
+
+# Push updates to GitHub mirror
+git push --mirror https://github.com/your-username/chromium-mirror.git
+cd ..
+rm -rf chromium-src.git
